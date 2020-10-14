@@ -1,8 +1,16 @@
 import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import SearchBar from './components/SearchBar/Search'
+import './App.scss'
+import FetchData from './components/FetchData/FetchData'
 
 const App = () => {
     return (
-        <h1>selamss </h1>
+        <div className="App">
+            <Navbar />
+            <SearchBar />
+            <FetchData />
+        </div>
     )
 }
 
