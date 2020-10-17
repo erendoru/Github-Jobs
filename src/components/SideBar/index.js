@@ -34,7 +34,7 @@ function index() {
                     <span>Amsterdam</span>
                 </div>
                 <div className="form NewYork">
-                    <input type="checkbox" name='NewYork' checked />
+                    <input type="checkbox" name='NewYork' defaultChecked='true' />
                     <span>New York</span>
                 </div>
                 <div className="form Berlin">
