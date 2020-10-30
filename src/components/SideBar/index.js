@@ -20,7 +20,7 @@ function index() {
                 <div className="form-text">
                     <h4>LOCATION</h4>
                     <div className="city-input">
-                        <i class="fas fa-globe-europe"></i>
+                        <i className="fas fa-globe-europe"></i>
                         <input type="text" name='city' placeholder='City,state,zip code or country' />
                     </div>
                 </div>
