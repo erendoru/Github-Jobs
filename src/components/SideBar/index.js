@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './style.scss'
+import { Store } from '../../Contexts/JobsContext';
 
 
 
 function index() {
+
+    const store = useContext(Store);
+
 
     const handleSubmit = e => {
         e.preventDefault();
