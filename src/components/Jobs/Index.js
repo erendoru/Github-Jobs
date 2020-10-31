@@ -1,31 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './style.scss'
-import axios from 'axios';
 import * as dayjs from 'dayjs';
 import "dayjs/locale/tr";
 import RelativeTime from "dayjs/plugin/relativeTime";
+import { Store } from '../../Contexts/JobsContext';
 
 dayjs.extend(RelativeTime)
 dayjs.locale('tr');
 
 function jobs() {
 
-    const [jobs, setJobs] = useState([]);
-
+    const { state } = useContext(Store);
     var a = dayjs()
-
-    useEffect(() => {
-        axios.get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json')
-            .then((res) => {
-                setJobs(res.data);
-            })
-
-    }, [])
-
 
     return (
         <div className='jobs'>
-            {jobs.slice(0, 3).map((data, i) => {
+            {state.jobs.slice(0, 3).map((data, i) => {
                 return (
                     <div className="card" key={i}>
                         <div className="img-side">
