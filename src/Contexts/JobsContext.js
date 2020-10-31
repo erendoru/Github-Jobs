@@ -14,6 +14,8 @@ function reducer(state, action) {
     switch (action.type) {
         case 'FETCH_DATA':
             return { ...state, jobs: action.payload };
+        case 'ADD_CITY':
+            return { ...state, city: action.payload };
         default:
             return state;
     }
