@@ -14,7 +14,7 @@ const App = () => {
 
     useEffect(() => {
         const fetchDataAction = async () => {
-            const data = await fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json');
+            const data = await fetch(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=ruby&location=${state.city}`);
             const dataJSON = await data.json();
             return dispatch({
                 type: 'FETCH_DATA',
@@ -29,7 +29,6 @@ const App = () => {
     return (
         <div className="App">
             <Navbar />
-
             <SearchBar />
             <div className='body'>
                 <SideBar />
